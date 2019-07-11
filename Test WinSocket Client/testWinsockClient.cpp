@@ -29,7 +29,6 @@
 using namespace std;
 
 #define DEFAULT_PORT "6789"
-#define DEFAULT_BUFLEN 512
 
 /*****************************************************************************
  * main()
@@ -142,6 +141,9 @@ int main(int argc, char *argv[])
 	//Cleanup
 	closesocket(ConnectSocket);
 	WSACleanup();
+
+	//Wait
+	cin.ignore();
 
 	return 0;
 }
